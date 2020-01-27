@@ -14,15 +14,15 @@ model: any = {};
   }
 login() {
   this.authservice.login(this.model).subscribe(next => {
-    console.log('Log in success')
-  }, error =>{console.log('Log in Fail')});
+    console.log('Log in success');
+  }, error => {console.log(error); });
 }
 
-loggedIn(){
+loggedIn() {
   const token = localStorage.getItem('token');
   return !!token;
 }
-logout(){
+logout() {
   localStorage.removeItem('token');
   console.log('logged out');
 }
