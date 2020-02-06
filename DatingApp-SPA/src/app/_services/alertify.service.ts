@@ -15,7 +15,7 @@ export class AlertifyService {
   }
 
   success(message: string) {
-    alertify.success(message);
+    alertify.success(message); 
   }
 
   error(message: string) {
