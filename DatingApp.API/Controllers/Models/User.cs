@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DatingApp.API.Controllers.Models
 {
@@ -21,5 +22,7 @@ namespace DatingApp.API.Controllers.Models
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public System.Collections.Generic.ICollection<Photo> Photos {get;set;}
+        public ICollection<Like> Likers{get;set;}
+        public ICollection<Like> Likees{get;set;}
     }
 }
